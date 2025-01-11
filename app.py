@@ -126,4 +126,4 @@ def get_movie_by_name_region_sub_city(movie_name, region, sub_city):
 
 if __name__ == '__main__':
     os.makedirs(REGION_PATH, exist_ok=True)
-    app.run(debug=True,host="0.0.0.0", port=5001)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5001)))
